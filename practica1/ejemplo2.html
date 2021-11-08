@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejercicio2.js"></script>
+    <title>Mi primer formulario</title>
+</head>
+<body>
+    <form>
+        Nombre <input type="text" id="nombreF" >
+        <br>
+        <br>
+        Apellido1 <input type="text" id="apellido1F">
+        <br>
+        <br>
+        Apellido2 <input type="text" id="apellido2F">
+        <br>
+        <br>
+        Fecha de Nacimiento <input type="text" id="fechaF" >
+        <br>
+        <br>
+        DNI <input type="text" id="dniF" >
+        <br>
+        <br>
+        Curso <select id="cursoF">
+                <option value="1DAW">1DAW</option>
+                <option value="2DAW">2DAW</option>
+                <option value="1ASIR">1ASIR</option>
+                <option value="2ASIR" selected>2ASIR</option>
+            </select>
+
+        <br>
+        <br>
+        <button id="btnEnviar"> Enviar Formulario </button>
+    </form>
+    <!-- si el dni esta correcto sale en verde, sino en rojo -->
+    <p>Hola mi nombre es <span id="nombre"></span> naci el dia <span id="fechaNacimiento"></span> mi dni es <span id="dni"></span> y estoy matriculado en <span id="curso"></span> </p>
+</body>
+</html>

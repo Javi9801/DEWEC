@@ -1,0 +1,94 @@
+/* #tablaImagen{
+
+    width: 540px;
+    height: 540px;
+    border-spacing: 0px;
+    color: black;
+} */
+
+.oculto{
+    display: none;
+}
+
+
+/* td{
+    width: 131px;
+    height: 131px;
+    border: 1px solid;
+} */
+/*
+#tablaImagen td div{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/imagen.png");
+} */
+/*
+#segunda{
+    background-position-x: -131px;
+}
+
+#tercera{
+    background-position-x: -265px;
+}
+
+#cuarta{
+    background-position-x: -393px;
+}
+
+#quinta{
+    background-position-y: -131px;
+}
+
+#sexta{
+    background-position-y: -131px;
+    background-position-x: -131px;
+}
+
+#septima{
+    background-position-y: -131px;
+    background-position-x: -265px;
+}
+
+#octava{
+    background-position-y: -131px;
+    background-position-x: -393px;
+}
+
+#novena{
+    background-position-y: -265px;
+}
+
+#decima{
+    background-position-y: -265px;
+    background-position-x: -131px;
+}
+
+#undecima{
+    background-position-y: -265px;
+    background-position-x: -265px;
+}
+
+#duodecima{
+    background-position-y: -265px;
+    background-position-x: -393px;
+}
+
+#decimotercera{
+    background-position-y: -393px;
+}
+
+#decimocuarta{
+    background-position-y: -393px;
+    background-position-x: -131px;
+}
+
+#decimoquinta{
+    background-position-y: -393px;
+    background-position-x: -265px;
+}
+
+#decimosexta{
+    background-position-y: -393px;
+    background-position-x: -393px;
+}
+*/

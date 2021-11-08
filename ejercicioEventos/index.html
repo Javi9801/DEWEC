@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="libreria.js"></script>
+</head>
+<body>
+  <p>DNI <input type="text" id="dni" name="dni" value=""></p>
+
+  <p>Nombre <input type="text" id="nombre" pattern="^[A-Za-z]+$" required name="nombre" value=""></p>
+
+  <p>Fecha <input type="text" id="fecha" name="fecha" value=""></p>
+
+  <input type="button" id="btnGuardar" name="btnGuardar" value="Guardar">
+
+</body>
+</html>
+
+
+
+
+<!--
+    DNI: escribir numeros y que al 8 ponga la letra automaticamente, y justo despues cambie el foco al nombre
+    NOMBRE: en el nombre se deshabilitan los numeros, al pulsar intro baja a la fecha
+    FECHA: escribo dos numeros y pone la barra automaticamente
+    Boton guardar: creamos un objeto con la informacion anterior y lo añadimos a una tabla, la cual si arrastramos la fila hasta el dni se rellenan todos los datos
+-->

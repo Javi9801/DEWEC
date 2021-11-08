@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejercicio.js"></script>
+    <style>
+        .oculto{
+            display: none;
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p><textarea id="entrada" name="entrada"></textarea></p>  <br> <button type="button" id="procesar" value="procesar">Procesar</button> 
+        <br>
+        <br>
+        codigoPostal <input type="text" id="CP" pattern="/0[1-9]\d{3}|[1-4]\d{4}|5[0-2]\d{3}$/"> 
+        <input type="submit" value="enviar">
+        <br>
+        <br>
+        Direccion <input type="text" id="direccion"> 
+        <br>
+        <br>
+
+        Provincia <select id="provincia">
+        </select> 
+
+        Municipio <select id="municipio">
+        </select> 
+
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .oculto{
+            display: none;
+        }
+
+    </style>
+    <script src="js/index.js"></script>
+    <script src="js/libreria.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+        <div id="radiobuttons">
+            <div id>
+                <input type="radio" value="persona" name="botones" id="btnpersona" >
+                <label for="persona">Persona</label>
+            </div>
+
+            <div id>
+                <input type="radio" value="empresa" name="botones" id="btnempresa">
+                <label for="empresa">Empresa</label>
+            </div>
+        </div>
+
+        
+        <div id="persona" class="oculto">
+
+            <h3>SEGURO</h3>
+            <p><label for="dni">DNI</label>
+            <input type="text" value="" id="dni"></p>
+
+            <p><label for="nombre">Nombre</label>
+                <input type="text" value="" id="nombre"></p>
+
+            <p><label for="apellidos">Apellidos</label>
+                <input type="text" value="" id="apellidos"></p>
+
+            <p><label for="fnac">Fecha Nacimiento</label>
+                <input type="text" value="" id="fnac"></p>
+
+        </div>
+
+
+        
+        <div id="empresa" class="oculto">
+            <h3>SEGURO</h3>
+            <p><label for="CIF">CIF</label>
+                <input type="text" value="" id="CIF"></p>
+
+            <p><label for="razon">Razon Social</label>
+                <input type="text" value="" id="razon"></p>
+
+            
+
+        </div>
+
+        <div id="todos" class="oculto">
+
+            <p><label for="direccion">Direccion</label>
+                <input type="text" value="" id="direccion"></p>
+
+            <p><label for="CP">CP</label>
+                <input type="text" value="" id="CP">
+            </p>
+
+                <textarea id="entrada" value=""></textarea>
+            
+                Provincia <select id="provincia">
+                </select> 
+        
+                Municipio <select id="municipio">
+                </select> 
+        
+                <button type="button" id="procesar" value="procesar">Procesar</button> 
+            </p>
+        
+            <p><label for="fcarnet">Fecha Carnet</label>
+                <input type="text" value="" id="fcarnet"></p>
+                
+            <p><label for="telefono">Telefono</label>
+                <input type="text" value="" id="telefono"></p>
+
+                <h3>VEHICULO</h3>
+            <p><label for="matricula">Matricula</label>
+                <input type="text" value="" id="matricula"></p>
+
+            <p><label for="marca">Marca</label>
+                <input type="text" value="" id="marca"></p>
+
+            <p><label for="modelo">Modelo</label>
+                <input type="text" value="" id="modelo"></p>
+                
+            
+            <button type="button" id="validar" value="validar">Validar</button>
+
+
+        </div>
+
+        
+
+    </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/libreria.js"></script>
+    <script src="js/tabla.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        DNI <input type="text" id="dni" value="">
+        NOMBRE <input type="text" id="nombre" value="">
+        EDAD <input type="text" id="edad" value="">
+        <input type="button" value="INSERTAR" id="insertar">
+    </form>
+
+    <br>
+    <br>
+
+    <table editable="">
+        <thead>
+            <tr>
+                <th edicion="no" tipo="cadena">DNI</th>
+                <th tipo="cadena">NOMBRE</th>
+                <th tipo="entero">EDAD</th>
+
+            </tr>
+        </thead>
+
+        <tbody id="cuerpo">
+            <tr>
+                <td>77694004G</td>
+                <td>javi</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>11111111H</td>
+                <td>pepe</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+
+
+
+    </table>
+
+</body>
+</html>
