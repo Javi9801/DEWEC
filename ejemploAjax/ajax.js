@@ -16,8 +16,23 @@ window.addEventListener("load", function(){
 
         ajax.open("GET","responder.php?nombre="+nombre+"&apellido="+apellido);
         ajax.send();
+        // ajax.send(encodeURI("nombre"+nombre+"&apellido="+apellido));
     }
 
+
+
+
+
+    function actualiza(){
+        const ajax = new XMLHttpRequest();
+        ajax.onload = function(){
+            ultimas = innerHTML = this.responseText;
+        }
+
+        ajax.open("GET", "noticias.txt");
+        ajax.send();
+    }
+    window.setInterval(actualiza(),5000);
 
 
 
