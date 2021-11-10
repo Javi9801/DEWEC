@@ -10,9 +10,10 @@ window.addEventListener("load",function(){
 
 
     // var alumnos = JSON.parse(selectIzq.convertirJson());
-    // localStorage.setItem("alumnos",alumnos);
+    // localStorage.setItem("alumnos",null);
 
     var alumnos = localStorage.getItem("alumnos");
+    
     alumnos = JSON.parse(alumnos);
     if(alumnos != null){
         for(let i=0; i<alumnos.length;i++){
