@@ -19,4 +19,17 @@ class BD{
         $res->bindParam(':mensaje',$mensaje);
         $res->execute();
     }
+
+    public static function obtieneMensajes():array{
+        $ret = array();
+
+    // $res = self::$con->query("SELECT * FROM Foro.mensajes WHERE id>=(SELECT id FROM foro.mensajes ORDER BY id DESC LIMIT 1)");
+        $res = self::$con->query("Select * from Foro.mensajes");
+        while($registro = $res->fetch()){
+            $u = new mensaje($registro['usuario'],$registro['mensaje']);
+            $ret[] = $u;
+        }
+
+        return $ret;
+    }
 }

@@ -4,6 +4,8 @@ window.addEventListener("load",function(){
     const form = this.document.getElementById("form1");
     var usuario = form["usuario"];
     var mensaje = form["mensaje"];
+    var contenedorMensajes = this.document.getElementById("contenedorMensajes");
+    
 
     enviar.onclick = function(ev){
         ev.preventDefault();
@@ -29,9 +31,23 @@ window.addEventListener("load",function(){
         }
     }
 
-    // mensaje.onkeydown = function(ev){
-    //     if(ev.keyCode==13){
 
-    //     }
-    // }
+
+
+
+    function actualiza(){
+
+        var texto = encodeURI("usuario="+usuario.value+"&"+
+                        "mensaje="+mensaje.value);
+        const ajax = new XMLHttpRequest();
+        ajax.onload = function(){
+            contenedorMensajes.innerHTML = ajax.responseText;
+        }
+
+        ajax.open("POST", "pedir.php");
+        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        ajax.send(texto);
+    }
+
+     window.setInterval(actualiza,2000);
 })
