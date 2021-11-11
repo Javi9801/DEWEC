@@ -20,16 +20,17 @@ class BD{
         $res->execute();
     }
 
-    public static function obtieneMensajes():array{
+    public static function obtieneMensajes($siguiente){
         $ret = array();
 
     // $res = self::$con->query("SELECT * FROM Foro.mensajes WHERE id>=(SELECT id FROM foro.mensajes ORDER BY id DESC LIMIT 1)");
-        $res = self::$con->query("Select * from Foro.mensajes");
-        while($registro = $res->fetch()){
-            $u = new mensaje($registro['usuario'],$registro['mensaje']);
-            $ret[] = $u;
-        }
+        $res = self::$con->query("Select * from Foro.mensajes WHERE id>='$siguiente'");
+        // while($registro = $res->fetch()){
+        //     $u = new mensaje($registro[0],$registro[1],$registro[2], $registro[3]);
+        //     $ret[] = $u;
+        // }
 
-        return $ret;
+        // return $ret;
+        return $res;
     }
 }

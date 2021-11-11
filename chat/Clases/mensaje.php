@@ -19,6 +19,14 @@ class mensaje{
         return $this->id;
     }
 
+    public function setId($id){
+         $this->id = $id;
+    }
+
+    public function setHora($hora){
+        $this->hora = $hora;
+   }
+
     public function getHora(){
         return $this->hora;
     }
@@ -36,9 +44,11 @@ class mensaje{
     //     }
     // }
 
-    public function __construct($usuario, $mensaje){
+    public function __construct($id, $usuario, $mensaje, $hora){
+        $this->id = $id;
         $this->usuario = $usuario;
         $this->mensaje = $mensaje;
+        $this->hora = $hora;
 
     }
 }

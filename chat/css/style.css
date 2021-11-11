@@ -1,0 +1,14 @@
+#contenedorMensajes{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+
+.otros{
+    /* flex-wrap: wrap; */
+    margin-bottom: 20px;
+    text-align: right;
+    margin-right: 20px;
+}
