@@ -10,11 +10,15 @@
 </head>
 <body>
 
+  <div id="contenedorMensajes">
+  </div>
+
     <form id="form1" action="chat.php" method="POST">
 
       <p>
         <label for="usuario">Usuario</label>
         <input type="text" id="usuario" name="usuario" value="">
+        <input type="submit" id="enviar" name="enviar" value="Enviar">
       </p>
 
       <label for="mensaje">Mensaje</label>
@@ -22,14 +26,14 @@
         <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
       </p>
 
-      <p><input type="submit" id="enviar" name="enviar" value="Enviar"></p>
+
 
     </form>
 
-    <div id="contenedorMensajes">
 
 
-    </div>
+
+
 </body>
 
 

@@ -1,14 +1,39 @@
 #contenedorMensajes{
     position: relative;
-    height: 300px;
+    height: 380px;
     width: 100%;
     overflow-y: scroll;
+    background-color:#F4E9E5;
+    margin-top: 10px;
+    border: 3px solid black;
+}
+
+
+.propio{
+    /* flex-wrap: wrap; */
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 65%;
+    border: 3px solid black;
+    width: 30%;
+    padding: 10px;
+    background-color: #DCF8C6;
+    border-radius: 10px;
 }
 
 
 .otros{
-    /* flex-wrap: wrap; */
-    margin-bottom: 20px;
-    text-align: right;
-    margin-right: 20px;
+    border: 3px solid black;
+    width: 30%;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.usuario{
+    font-size: 1.5em;
+    text-transform: capitalize;
+    line-height: 40px;
 }
