@@ -4,6 +4,7 @@ window.addEventListener("load",function(){
     const form = this.document.getElementById("form1");
     var usuario = form["usuario"];
     var mensaje = form["mensaje"];
+    var fichero = form["imagen"];
     var contenedorMensajes = this.document.getElementById("contenedorMensajes");
     var ultimo=0;
     var tmp1 = setInterval(pedirMensajes,5000);
@@ -30,9 +31,18 @@ window.addEventListener("load",function(){
                     }
                 }
             }
+
+            var formData = new formData();
+            formData.append("usuario",usuario.value);
+            formData.append("mensaje",mensaje.value);
+
+            if(fichero.files.length>0){
+                formData.append("imagen",fichero.files[0]);
+            }
+
             ajax.open("POST", "chat.php");
             ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            ajax.send(texto);
+            ajax.send(formData);
         }
     }
 
