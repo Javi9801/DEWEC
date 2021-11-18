@@ -59,7 +59,7 @@ window.addEventListener("load",function(){
                 method:"POST",
                 body:formData
             })
-                .then(response => respose.JSON())
+                .then(response => response.JSON())
                 .catch(error=>console.log("Error", error))
                 .then(response => {
                     if(response.respuesta){
