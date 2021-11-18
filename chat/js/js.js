@@ -17,32 +17,56 @@ window.addEventListener("load",function(){
         ev.preventDefault();
 
         if(usuario.value != "" && mensaje.value!=""){
-            var texto = encodeURI("usuario="+usuario.value+"&"+
-                        "mensaje="+mensaje.value);
 
-            const ajax = new XMLHttpRequest();
+             //     var texto = encodeURI("usuario="+usuario.value+"&"+
+        //                 "mensaje="+mensaje.value);
 
-            ajax.onreadystatechange= function(){
-                if(ajax.readyState==4 && ajax.status==200){
-                    var respuesta = ajax.responseText;
-                    if(respuesta=="OK"){
-                        form["mensaje"].value="";
-                        form["mensaje"].focus();
-                    }
-                }
-            }
+        //     const ajax = new XMLHttpRequest();
 
-            var formData = new formData();
+        //     ajax.onreadystatechange= function(){
+        //         if(ajax.readyState==4 && ajax.status==200){
+        //             var respuesta = ajax.responseText;
+        //             if(respuesta=="OK"){
+        //                 form["mensaje"].value="";
+        //                 form["mensaje"].focus();
+        //             }
+        //         }
+        //     }
+
+        //     var formData = new FormData();
+        //     formData.append("usuario",usuario.value);
+        //     formData.append("mensaje",mensaje.value);
+        //     formData.append("imagen",fichero.value);
+
+        //     if(fichero.files.length>0){
+        //         formData.append("imagen",fichero.files[0]);
+        //     }
+
+        //     ajax.open("POST", "chat.php");
+        //     // ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     ajax.send(formData);
+
+            var formData = new FormData();
             formData.append("usuario",usuario.value);
             formData.append("mensaje",mensaje.value);
+            formData.append("imagen",fichero.value);
 
             if(fichero.files.length>0){
                 formData.append("imagen",fichero.files[0]);
             }
 
-            ajax.open("POST", "chat.php");
-            ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            ajax.send(formData);
+            fetch("chat.php",{
+                method:"POST",
+                body:formData
+            })
+                .then(response => respose.JSON())
+                .catch(error=>console.log("Error", error))
+                .then(response => {
+                    if(response.respuesta){
+                        form["mensaje"].value="";
+                        form["mensaje"].focus();
+                    }
+                })
         }
     }
 
