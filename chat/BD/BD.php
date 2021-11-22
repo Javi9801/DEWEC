@@ -10,13 +10,15 @@ class BD{
 
     public static function altaMensaje(Mensaje $m){
 
-        $res = self::$con->prepare("Insert into Foro.mensajes(usuario,mensaje,hora) values(:usuario, :mensaje, NOW())");
+        $res = self::$con->prepare("Insert into Foro.mensajes(usuario,mensaje,hora,imagen) values(:usuario, :mensaje, NOW(), :fichero)");
 
         $usuario = $m->getUsuario();
         $mensaje = $m->getMensaje();
+        $imagen = $m->getImagen();
 
         $res->bindParam(':usuario',$usuario);
         $res->bindParam(':mensaje',$mensaje);
+        $res->bindParam(':fichero',$imagen);
         $res->execute();
     }
 

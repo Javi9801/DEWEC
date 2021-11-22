@@ -23,6 +23,7 @@ BD::conecta();
         $objectMensaje->usuario = $i[1];
         $objectMensaje->mensaje = $i[2];
         $objectMensaje->hora = $i[3];
+        $objectMensaje->imagen = $i[4];
 
         $object->mensaje[] =$objectMensaje;
         $ultimo = $i[0];

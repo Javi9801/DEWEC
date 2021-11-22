@@ -5,7 +5,7 @@ class mensaje{
     private $mensaje;
     private $id;
     private $hora;
-
+    private $imagen;
 
     public function getUsuario(){
         return $this->usuario;
@@ -13,6 +13,10 @@ class mensaje{
 
     public function getMensaje(){
         return $this->mensaje;
+    }
+
+    public function getImagen(){
+        return $this->imagen;
     }
 
     public function getId(){
@@ -44,11 +48,12 @@ class mensaje{
     //     }
     // }
 
-    public function __construct($id, $usuario, $mensaje, $hora){
+    public function __construct($id, $usuario, $mensaje, $hora, $imagen){
         $this->id = $id;
         $this->usuario = $usuario;
         $this->mensaje = $mensaje;
         $this->hora = $hora;
+        $this->imagen = $imagen;
 
     }
 }

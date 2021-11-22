@@ -76,7 +76,6 @@ window.addEventListener("load",function(){
 
     function pedirMensajes(){
 
-
         // var texto = encodeURI("usuario="+usuario.value+"&"+
         //                 "mensaje="+mensaje.value);
         const ajax = new XMLHttpRequest();
@@ -119,9 +118,14 @@ window.addEventListener("load",function(){
         div4.className="mensaje";
         div4.innerHTML = mensaje.mensaje;
 
+        const div5 = document.createElement("div");
+        div5.className="mensaje";
+        div5.innerHTML = mensaje.imagen;
+
         div1.appendChild(div2);
         div1.appendChild(div3);
         div1.appendChild(div4);
+        div1.appendChild(div5);
 
         return div1;
 
