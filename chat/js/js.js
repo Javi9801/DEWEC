@@ -49,7 +49,6 @@ window.addEventListener("load",function(){
             var formData = new FormData();
             formData.append("usuario",usuario.value);
             formData.append("mensaje",mensaje.value);
-            formData.append("imagen",fichero.value);
 
             if(fichero.files.length>0){
                 formData.append("imagen",fichero.files[0]);
@@ -118,9 +117,10 @@ window.addEventListener("load",function(){
         div4.className="mensaje";
         div4.innerHTML = mensaje.mensaje;
 
-        const div5 = document.createElement("div");
-        div5.className="mensaje";
-        div5.innerHTML = mensaje.imagen;
+        const div5 = document.createElement("img");
+        div5.imagen="mensaje";
+        div5.setAttribute("src","data:image/jpeg;base64,"+mensaje.imagen);
+        div5.setAttribute("width", "100px");
 
         div1.appendChild(div2);
         div1.appendChild(div3);
