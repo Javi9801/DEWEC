@@ -1,0 +1,21 @@
+<ol>
+    <li>kk</li>
+<ol>
+<ul>
+    <li>tomate</li>
+    <li>pepino</li>
+    <li>lechuga</li>
+    <li>aceitunas</li>
+    <li>zanahoria</li>
+<ul>
+
+1.Todos los li que están dentro del ul color rojo
+2.Borrar el primer li de cada ul o ol
+3.Los li en posición par fondo amarillo
+4. EL ultimo li lo situamos el primero
+5.Los li en posicion impar los escribimos en mayuscula
+6.Añadimos en la 3ª posición un li con el texto atún
+7.Al pulsar sobre un li con click lo situamos delante del inmediato superior
+8.Al pulsar sobre un li con dblckick lo situamos detras del inmediatoinferior
+9. Al posicionarme sobre un li se aumenta el tamaño de la letra a 30px despues de 2 segundos
+10.Añadir una ventana pantalla completa fondo semitransparente y dentro un msg con cruz para poder cerrarlo.
